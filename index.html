@@ -1,1 +1,89 @@
-"Hola mundo"  
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>TO DO list</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="text-center text-light my-4">
+            <h2 class="mb-4">TO DO list</h2>
+            <form class="search">
+                <input type="text" class="form-control" name="search" placeholder="Search TO DOs...">
+            </form>
+        </header>
+
+
+		<table >
+			<thead>
+				<tr class="to-dos add text-center my-4" >
+					<th>Ticket</th>
+					<th>Tarea</th>
+					<th>prioridad</th>
+					<th>Cliente</th>
+					<th>Fecha Alta</th>
+					<th>Alert Fecha</th>
+					<th>Descripcion</th>
+					<th>Editar</th>
+					<th>Borrar</th>
+				</tr>
+			</thead>
+			<tbody class="to-dos add text-center my-4">
+				<tr>
+					<td>1</td>
+					<td>Soporte</td>
+					<td>Alta</td>
+					<td>Oficina </td>
+					<td>27/07/20 11:20 </th>
+					<th>27/07/20 15:00 </th>
+					<th>Bidon de agua</th>
+					<td> <i class="fa fa-cog fa-fw" aria-hidden="true"></i> </td>
+					<td> <i class="far fa-trash-alt delete"></i></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<br>
+		
+		
+
+        <form class="add text-center my-4">
+			<label for="" class="text-light">Add a new "to do":</label>		
+			<div class="form-group form-inline ">	
+				<select class="styled-select space" placeholder="tarea">
+				  <option>Tarea</option>
+				  <option>Desarrollo</option>
+				  <option>Integracion</option>
+				  <option>Soporte</option>
+				  <option>Testing</option>
+				</select>
+				<select class="styled-select space" placeholder="prioridad">
+				  <option>Alta</option>
+				  <option>Media</option>
+				  <option>Baja</option>
+				</select>					
+				<input type="text" class="form-control space" name="cliente" placeholder="cliente">
+				<input type="date" class="form-control space" name="fAlert" placeholder="Fecha Alert">
+			</div>
+			<input type="text" class="form-control space" name="descripcion" placeholder="descripcion">
+        </form>
+
+    </div>
+	
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
