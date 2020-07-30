@@ -3,6 +3,15 @@
 <html lang="en">
 
 <head>
+
+	<div class="scrollmenu">
+	  <a href="#home">Home</a>
+	  <a href="#news">News</a>
+	  <a href="#contact">Contact</a>
+	  <a href="#about">About</a>
+	  ...
+	</div>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,8 +28,14 @@
 
         <header class="text-center text-light my-4">
             
-		
-			<form class="add text-center my-4">
+			<!-- Tab links Alta -- Busqueda -->
+			<div class="tab">
+				<button class="tablinks" onclick="openCity(event, 'Alta')">Alta</button>
+				<button class="tablinks" onclick="openCity(event, 'Search')">Buscar</button>
+			</div>
+			<!-- Tab content -->	
+	
+			<form id ="Alta" class="add text-center my-4 tabcontent">
 				<label for="" class="text-light">Add a new "to do":</label>		
 				<div class="form-group form-inline ">	
 					<select class="styled-select space" placeholder="tarea">
@@ -49,8 +64,43 @@
 				</div>
 				<input type="text" class="form-control space" name="descripcion" placeholder="descripcion">
 				
-				<button type="button" class="form-control space">Alta</button>
-			</form>			
+				<button type="button" class="btn btn-default space">To do</button>
+				<button type="button" class="btn btn-default space">Activo</button>
+
+				
+			</form>	
+
+			<form id ="Search" class="add text-center my-4 tabcontent">
+				<label for="" class="text-light">Buscar:</label>		
+				<div class="form-group form-inline ">	
+					<select class="styled-select space" placeholder="tarea">
+					  <option>Tarea</option>
+					  <option>Desarrollo</option>
+					  <option>Integracion</option>
+					  <option>Soporte</option>
+					  <option>Testing</option>
+					</select>
+					<select class="styled-select space" placeholder="prioridad">
+					  <option>Alta</option>
+					  <option>Media</option>
+					  <option>Baja</option>
+					</select>					
+					<input class="form-control space" list="clientes" name="cliente" type="text" placeholder="Elige un cliente">
+					<datalist id="clientes">
+						<option value="Lorca"></option>
+						<option value="Bullas"></option>
+						<option value="Santa Cruz"></option>
+						<option value="Cieza"></option>
+						<option value="A Coruña"></option>
+						<option value="Durango"></option>
+						<option value="Torrelavega"></option>
+					</datalist>
+					<input type="date" class="form-control space" name="fAlert" placeholder="Fecha Alert">
+				</div>
+				<input type="text" class="form-control space" name="descripcion" placeholder="descripcion">
+				
+				<button type="button" class="form-control space">Go</button>
+			</form>				
 			<h2 class="mb-4">TO DO list</h2>
             <form class="search">
                 <input type="text" class="form-control" name="search" placeholder="Search TO DOs...">
@@ -136,12 +186,13 @@
 		</table>
 
     </div>
-	
-	
-
-	
 
 
+
+	<br>
+	<br>
+	<br>
+	<script src="angular.nin.js" type="text/javascript"></script>
     <script src="app.js"></script>
 </body>
 
